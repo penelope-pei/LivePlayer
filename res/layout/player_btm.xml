@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:tools="http://schemas.android.com/tools"    
+    android:layout_width="match_parent"  
+    android:layout_height="wrap_content" >  
+  
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        
+       <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_weight="3">
+            
+          <ImageView  
+            android:id="@+id/paly_music_album"  
+            android:layout_width="55dp"  
+            android:layout_height="55dp"
+            android:paddingLeft="10dp"  />  
+    
+           <RelativeLayout  
+            android:id="@+id/music_about_layout"  
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp" > 
+            
+               <com.activity.view.LyricView
+		     android:id="@+id/LyricShowOnMusic" 
+		     android:layout_width="match_parent"
+		     android:layout_height="55dp"
+		     android:gravity="center"
+             android:visibility="invisible">
+	    	</com.activity.view.LyricView>
+  			<RelativeLayout 
+  			    android:id="@+id/show_music_info"
+  			    android:layout_width="match_parent"  
+            android:layout_height="wrap_content">
+  			    <com.activity.view.MarqueeTextView  
+                android:id="@+id/play_music_name"  
+                android:layout_width="wrap_content"  
+                android:layout_height="wrap_content"  
+                android:layout_alignParentLeft="true"  
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"  
+                android:textColor="@color/white_text"
+                android:textSize="15sp"/>
+            <RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5.0dp"
+                android:layout_below="@id/play_music_name">
+                <TextView  
+                android:id="@+id/play_music_singer"  
+                android:layout_width="wrap_content"  
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"  
+                android:layout_centerVertical="true"
+                android:singleLine="true" 
+                android:textColor="@color/white_text"
+                android:textSize="13sp"/>
+            <TextView
+                android:id="@+id/go_to_play_music"
+        		android:layout_width="40dp"
+        		android:layout_height="42dp"
+        		android:layout_toRightOf="@id/play_music_singer"
+        		android:layout_centerVertical="true"
+        		android:paddingLeft="5.0dp"
+        		android:background="@drawable/local_tab_list_item_into_normal"
+        		android:visibility="invisible" />
+            </RelativeLayout>
+  			</RelativeLayout>
+            </RelativeLayout>             
+      </LinearLayout>
+      <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="3">
+  
+            <Button  
+                android:id="@+id/play_previous_music"  
+                android:layout_width="30dp"  
+                android:layout_height="50dp" 
+                android:background="@drawable/player_previous_normal" />
+            <Button  
+                android:id="@+id/play_on_music"  
+                android:layout_width="60dp"  
+                android:layout_height="60dp" 
+                android:layout_marginLeft="20dp"/> 
+            <Button  
+                android:id="@+id/play_next_music"  
+                android:layout_width="30dp"  
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"  
+                android:background="@drawable/player_next_normal" />             
+      </LinearLayout>
+   </LinearLayout>
+  
+</RelativeLayout>  

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:id="@+id/relative_music_favorite"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:background="@drawable/background" > 
+    
+  
+    <RelativeLayout  
+        android:id="@+id/handle_top_favorite"  
+        android:layout_width="match_parent"  
+        android:layout_height="@dimen/dimen_50dp" 
+        android:layout_alignParentTop="true">
+           
+    <ImageView
+        android:id="@+id/title_button_id"
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/back_normal" />
+
+    <TextView
+        android:id="@+id/page_music_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/title_button_id"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_24sp"
+        android:text="@string/music_favotite" />
+    
+    </RelativeLayout>
+     
+     <TextView
+        android:id="@+id/list_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/handle_top_favorite"
+        android:background="@drawable/list_line"/>
+      
+    <ListView  
+        android:id="@+id/music_favorite_list"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:layout_below="@id/list_line_1" 
+        android:scrollbars="none" 
+        android:layout_marginTop="10dp" 
+        android:layout_marginBottom="50dp" >  
+    </ListView>
+    
+    <TextView
+        android:id="@+id/no_music_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_favorite"
+        android:visibility="invisible"
+        android:textSize="20sp"
+        android:textColor="@color/white_text"/>
+    
+     <include
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentBottom="true"
+       layout="@layout/player_btm" />
+    
+</RelativeLayout>  

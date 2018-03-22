@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>  
+  <!-- 边框/边缘半径，格式，尺度/维度 -->
+    <attr name="borderRadius" format="dimension" />  
+    <attr name="type">  
+        <enum name="circle" value="0" />  
+        <enum name="round" value="1" />  
+    </attr>  
+    <attr name="src" format="reference"></attr>  
+  
+    <!-- 自定义的控件 -->
+    <declare-styleable name="CustomImageView">  
+        <attr name="borderRadius" />  
+        <attr name="type" />  
+        <attr name="src" />  
+    </declare-styleable>  
+  
+</resources>

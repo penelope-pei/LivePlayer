@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:id="@+id/relative_music"  
+    android:layout_width="fill_parent"  
+    android:layout_height="fill_parent">  
+  
+    <RelativeLayout  
+        android:id="@+id/handle_top_music"  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content" >  
+     
+     <include
+        android:id="@+id/music_page_title"
+        android:layout_width="fill_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"
+        layout="@layout/page_title" />   
+     
+     <TextView
+        android:id="@+id/list_line_1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:paddingTop="5dp"
+        android:layout_below="@id/music_page_title"
+        android:background="@drawable/ring_common_title_bg"/>
+     
+     <RelativeLayout
+         android:id="@+id/info_song"
+         android:layout_width="fill_parent"
+         android:layout_height="50dp"
+         android:paddingTop="5dp"
+         android:gravity="center_vertical"
+         android:layout_below="@id/list_line_1">
+     
+       <RelativeLayout
+         android:id="@+id/rv_music"
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent"
+         android:gravity="center"
+         android:layout_alignParentLeft="true"
+         android:paddingLeft="5dp">
+         
+       <TextView
+         android:id="@+id/music_local_resource"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:gravity="center"  
+         android:textColor="@color/white"
+         android:textSize="20sp"
+         android:text="@string/music_local"/>
+     
+       <TextView
+            android:id="@+id/music_songs_num_img"
+        	android:layout_width="30dp"
+        	android:layout_height="20dp"
+        	android:layout_below="@id/music_local_resource"
+        	android:background="@drawable/xia"/>
+       
+       <TextView
+         android:id="@+id/song_num"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/music_local_resource"
+         android:layout_toRightOf="@id/music_songs_num_img"
+         android:textColor="@color/white"
+         android:textSize="15sp"
+         android:textStyle="italic"/>
+       
+         </RelativeLayout>
+         
+       <RelativeLayout
+         android:id="@+id/rv_music_1"
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent"
+         android:gravity="center"
+         android:layout_centerInParent="true"
+         android:layout_alignBottom="@id/rv_music">
+       
+       <TextView
+         android:id="@+id/music_favorite"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:textColor="@color/white"
+         android:textSize="20sp"
+         android:text="@string/music_favotite"/>
+       
+       <TextView
+           android:id="@+id/music_fav_img"
+        	android:layout_width="30dp"
+        	android:layout_height="20dp"
+        	android:layout_centerHorizontal="true"
+        	android:layout_below="@id/music_favorite"
+        	android:background="@drawable/xia"/>
+         
+       </RelativeLayout>
+         
+       <RelativeLayout
+         android:id="@+id/rv_music_2"
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent"
+         android:gravity="center"
+         android:layout_alignParentRight="true"
+         android:paddingRight="5dp"
+         android:layout_alignBottom="@id/rv_music">
+        
+        <TextView
+         android:id="@+id/music_history"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:textColor="@color/white"
+         android:textSize="20sp"
+         android:text="@string/music_history"/>  
+         
+        <TextView
+           android:id="@+id/music_history_img"
+        	android:layout_width="30dp"
+        	android:layout_height="20dp"
+        	android:layout_centerHorizontal="true"
+        	android:layout_below="@id/music_history"
+        	android:background="@drawable/xia"/>
+         </RelativeLayout>
+      </RelativeLayout>
+  
+     <TextView
+        android:id="@+id/list_line_2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/info_song"
+        android:background="@drawable/ring_common_title_bg"
+        android:visibility="gone"/>
+     
+    </RelativeLayout> 
+    
+  	<RelativeLayout
+        android:id="@+id/rl_music_list" 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/handle_top_music">
+       
+  	<ListView  
+        android:id="@+id/music_list"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:scrollbars="none">  
+    </ListView>
+    </RelativeLayout>
+    
+    <com.activity.view.SideBar
+        android:id="@+id/music_sidebar"  
+        android:layout_width="20dp"  
+        android:layout_height="match_parent"  
+        android:layout_below="@id/handle_top_music"
+        android:layout_alignParentRight="true" 
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="5dp" 
+        android:layout_marginRight="5dp">
+    </com.activity.view.SideBar>
+    
+    <TextView
+        android:id="@+id/no_music_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="30dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:textSize="20sp"
+        android:textColor="@color/white_text"/>
+    
+    <TextView
+            android:id="@+id/music_sort_textview"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/show_head_toast_bg"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="25.0dip"
+            android:visibility="invisible" />
+
+   <include
+       android:id="@+id/singlePlayer_layout"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:paddingTop="5dp"
+       android:layout_alignParentBottom="true"
+       layout="@layout/player_btm" />
+    
+</RelativeLayout>  

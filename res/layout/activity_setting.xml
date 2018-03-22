@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:id="@+id/Relative_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+    
+    <RelativeLayout  
+        android:id="@+id/handle_top_setting"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content" >  
+     
+     <include
+        android:id="@+id/setting_page_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        layout="@layout/page_title" />  
+       
+     <TextView
+        android:id="@+id/list_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/setting_page_title"
+        android:background="@drawable/list_line"/>
+       
+     </RelativeLayout>
+
+</RelativeLayout>

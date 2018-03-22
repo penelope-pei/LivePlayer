@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Live Player</string>
+    <string name="text_hint">waitting...</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="icon_music">音乐</string>
+    <string name="icon_video">视频</string>
+    <string name="icon_history">播放历史</string>
+    <string name="icon_setting">设置</string>
+    
+    <string name="song">魔鬼中的天使</string>
+    <string name="singer">田馥甄</string>
+    <string name="music_local">本地音乐</string>
+    <string name="song_music">歌曲</string>
+    <string name="video_local">本地视频</string>
+    <string name="music_favotite">喜爱歌单</string>
+    <string name="music_history">播放记录</string>
+    
+    <string name="no_data">暂无数据，请点击本地音乐进行添加</string>
+    <string name="no_fav_data">暂无喜爱音乐数据，请播放并添加</string>
+    <string name="no_history_data">暂无播放历史记录数据，请点击播放音乐</string>
+    <string name="no_favorite">还没有喜爱的音乐，快去添加吧</string>
+    <string name="no_video_data">暂无视频数据</string>
+    <string name="toast_hint">The latest List</string>
+    
+    <string name="unknown_singer">未知艺术家</string>
+    
+    <string name="enter">确    定</string>
+    <string name="cancel">取   消</string>
+    <string name="tips">温馨提示</string>
+    <string name="deling">正在移除，请稍候...</string>
+    <string name="del_finish">移除成功！</string>
+    <string name="background_setting">背景设置</string>
+    <string name="device_info">系统信息</string>
+   
+    
+    <string name="del_one">One</string>
+    <string name="del_all">All</string>
+    
+	<string name="dialog_tips">列表:仅从列表移除数据 /n 本地:从列表和本地移除数据</string>
+    
+	<string name="music_info">音乐信息</string>
+	<string name="music_name">歌曲名</string>
+    <string name="singer_name">歌手名</string>
+    <string name="music_duration">时长</string>
+    <string name="song_album">专辑名</string>
+    <string name="music_path">歌曲路径</string>
+	
+    <string name="play_danqu">单曲循环</string>
+    <string name="play_shunxuxunhuan">顺序循环</string>
+    <string name="play_shunxu">顺序播放</string>
+    <string name="play_suiji">随机播放</string>
+    <string name="del_list">列表</string>
+    <string name="del_local">本地</string>
+    <string name="del_music">删除音乐</string>
+    <string name="user_info">用户信息</string>   
+</resources>

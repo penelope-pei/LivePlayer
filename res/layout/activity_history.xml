@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:id="@+id/Relative_history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+    
+   <RelativeLayout  
+        android:id="@+id/handle_top_history"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content" >  
+     
+     <include
+        android:id="@+id/history_page_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        layout="@layout/page_title" />  
+        
+      <TextView
+        android:id="@+id/list_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/history_page_title"
+        android:background="@drawable/list_line"/>
+       
+     </RelativeLayout>
+     
+   <RelativeLayout
+        android:id="@+id/music_history_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/handle_top_history"
+        android:background="@color/transparent" >
+
+        <ExpandableListView
+            android:id="@+id/music_history_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/transparent"
+            android:focusable="true"
+            android:footerDividersEnabled="false"
+            android:groupIndicator="@null"
+            android:scrollbars="none" />
+    </RelativeLayout>
+    
+   <RelativeLayout
+        android:id="@+id/video_history_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/music_history_layout"
+        android:background="@color/transparent" >
+
+        <ExpandableListView
+            android:id="@+id/video_history_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/transparent"
+            android:focusable="true"
+            android:footerDividersEnabled="false"
+            android:groupIndicator="@null"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+</RelativeLayout>

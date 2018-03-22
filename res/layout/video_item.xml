@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="center">
+    
+    <RelativeLayout 
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+        <ImageView 
+        android:id="@+id/video_imageview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+        
+        <TextView
+        android:id="@+id/tv_pause_video"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/player_pause_normal"
+        android:visibility="visible"/>
+        
+        <TextView 
+        android:id="@+id/video_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white_text"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        />
+    </RelativeLayout>
+    <TextView 
+        android:id="@+id/video_item_name"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_text"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
+
+</LinearLayout>

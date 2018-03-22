@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:id="@+id/Relative_video"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+   <RelativeLayout  
+        android:id="@+id/handle_top_video"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >  
+     
+       <LinearLayout 
+           android:id="@+id/video_linearlayout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:gravity="center_vertical">
+           <TextView
+        	android:id="@+id/video_title_button_id"
+        	android:layout_width="40dp"
+        	android:layout_height="60dp"
+        	android:paddingLeft="10dp"
+        	android:background="@drawable/back_normal" />
+
+    	<TextView
+        	android:id="@+id/video_page_title_name"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="10dp"
+        	android:textColor="@color/greenyellow"
+        	android:textSize="25sp" />
+    	
+    	<TextView
+         	android:id="@+id/video_num"
+         	android:layout_width="wrap_content"
+         	android:layout_height="wrap_content"
+         	android:layout_marginLeft="20dp"
+         	android:textColor="@color/white"
+         	android:textSize="18sp"/>
+       </LinearLayout>
+       
+       <TextView
+        android:id="@+id/video_set_background"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="10dp"
+        android:background="@drawable/setting_background" />
+       
+     <TextView
+        android:id="@+id/list_line_01"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/video_linearlayout"
+        android:background="@drawable/ring_common_title_bg"/>
+     
+    </RelativeLayout>  
+  
+   <GridView
+        android:id="@+id/video_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="500dp"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:columnWidth="100dp"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:stretchMode="spacingWidth"
+        android:listSelector="@color/transparent"/>
+  
+   <TextView
+        android:id="@+id/no_video_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:textSize="25sp"
+        android:textColor="@color/white_text"
+        android:text="@string/no_video_data"/>
+   
+</RelativeLayout>
